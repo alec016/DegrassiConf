@@ -15,6 +15,7 @@ public class TestConfig {
   public static final DegrassiConfSpec.ConfigValue<String> testString;
   public static final DegrassiConfSpec.ConfigValue<Boolean> testBoolean;
   public static final DegrassiConfSpec.ConfigValue<String> newProperty;
+  public static final DegrassiConfSpec.EnumValue<TestEnum> enumProperty;
 
   static {
     BUILDER.push("short");
@@ -40,6 +41,9 @@ public class TestConfig {
     BUILDER.pop();
     BUILDER.push("newProperty");
     newProperty = BUILDER.comment("adding multiple").comment("comments to try").define("property", "adding new property to existing config");
+    BUILDER.pop();
+    BUILDER.push("enum");
+    enumProperty = BUILDER.defineEnum("testEnum", TestEnum.ENUM1);
     BUILDER.pop();
   }
 

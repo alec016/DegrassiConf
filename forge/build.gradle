@@ -64,7 +64,7 @@ components.java {
 
 unifiedPublishing {
     project {
-        displayName = "Degrassi-${project.minecraft_version}-${project.mod_version}"
+        displayName = "DegrassiConf-${project.minecraft_version}-${project.mod_version}"
         releaseType = "beta"
         if (rootProject.file("CHANGELOG.md").exists()) {
             changelog = rootProject.file("CHANGELOG.md").text
